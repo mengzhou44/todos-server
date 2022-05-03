@@ -16,6 +16,20 @@ export const setRoutes = (server: Server, repository: IRepository) => {
   });
 
   server.route({
+    method: 'POST',
+    path: '/token',
+    handler: async (request, h) => {
+      try {
+        const { email, providerToken } = request.payload;
+        
+      } catch (err) {
+        console.log((err as any).message);
+        throw createError(err);
+      }
+    },
+  });
+
+  server.route({
     method: 'GET',
     path: '/todos',
     handler: async () => {

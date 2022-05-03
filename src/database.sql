@@ -5,3 +5,7 @@ CREATE TABLE todo(
   description VARCHAR(255)
 );
 
+CREATE TABLE users(
+  id SERIAL PRIMARY KEY,
+  email VARCHAR(255)
+);
